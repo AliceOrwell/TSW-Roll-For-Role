@@ -2,6 +2,7 @@
 	TSW Roll For Role
 	https://github.com/AliceOrwell/TSW-Roll-For-Role/
 
+	Copyright (c) 2017 AliceOrwell
 	Released under the MIT license
  **********************************************************/
 
