@@ -36,27 +36,55 @@
 		</div>
 		<div class="rightpanel">
 			<form>
-        <div>
-          <label for="role-presets" class="for-select">Presets:</label>
-          <select name="role-presets" id="role-presets"></select>
-        </div>
-        <div>
-          <label for="roles">Roles:</label>
-          <textarea name="roles" id="roles" rows="9" cols="70"></textarea>
-        </div>
+				<div>
+				  <label for="role-presets" class="for-select">Presets:</label>
+				  <select name="role-presets" id="role-presets"></select>
+				</div>
+				<div>
+				  <label for="roles">Roles:</label>
+				  <textarea name="roles" id="roles" rows="9" cols="70"></textarea>
+				</div>
 				<div>
 					<label for="rolls">Rolls:</label>
 					<textarea name="rolls" id="rolls" rows="10" cols="70"></textarea>
 				</div>
-
-        <input type="submit" id="submit" value="Process" />
-
+				<input type="submit" id="submit" value="Process" />
 				<div class="output">
 					<label for="output">Output:</label>
 					<textarea name="output" id="output" rows="7" cols="70"></textarea>
 				</div>
 			</form>
 
+			<h2>Example</h2>
+			<div class="example">
+				<div class="input good">
+					Tank (Red)<br />
+					Tank (Purple)<br />
+					Healer<br />
+					DABS (Red)<br />
+					DABS (Purple)<br />
+					Shade 1<br />
+					Shade 2<br />
+					Shade 2<br />
+					Backup<br />
+				</div>
+				<div class="input good">
+					AliceOrwell rolled a 12.<br />
+					KangaRue rolled a 92.<br />
+					BigMiz rolled a 29.<br />
+					LemonWarlord rolled a 32.<br />
+					Ayesia rolled a 67.<br />
+					Puppycat rolled a 45.<br />
+					Kuraikaze rolled a 99.<br />
+					Ceryx rolled a 2.<br />
+					iLiVeInAbOx rolled a 50.<br />
+					Smyrill rolled a 3.
+				</div>
+				<span class="spacer">-&gt;</span>
+				<div class="output good">
+					10 Assignment(s) -- Tank (Red) := Kuraikaze :: Tank (Purple) := KangaRue :: Healer := Ayesia :: DABS (Red) := iLiVeInAbOx :: DABS (Purple) := Puppycat :: Shade 1 := LemonWarlord :: Shade 2 := BigMiz :: Shade 2 := AliceOrwell :: Backup := Smyrill :: Backup := Ceryx
+				</div>
+			</div>
 		</div>
 
     <link rel="stylesheet" href="./css/main.css" type="text/css" />

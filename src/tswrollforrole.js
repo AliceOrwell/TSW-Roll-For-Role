@@ -9,14 +9,16 @@
 var rolePresets = {
   "Custom": [],
   "Eidolon Elite": [
-    "Main Tank", "Off Tank", "Healer", "DABS", "DABS", "DPS", "DPS", "DPS", "DPS"
+    "Main Tank", "Off Tank", "Healer", "DABS", "DABS", "DPS", "DPS", "DPS", 
+	"DPS", "DPS"
   ],
   "Flappy NM": [
     "Tank (Red)", "Tank (Purple)", "Healer", "DABS (Red)", "DABS (Purple)",
-    "Shade 1", "Shade 2", "Shade 2", "Backup"
+    "Shade 1", "Shade 2", "Shade 2", "Backup", "Backup"
   ],
   "NYR Elite": [
-    "DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS", "DPS"
+    "DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS", "DPS",
+	"DPS"
   ]
 };
 

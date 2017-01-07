@@ -49,6 +49,30 @@ form .output {
   width: 70%;
 }
 
+.example {
+	text-align: left;
+}
+.example div {
+	display: inline-block;
+	font-family: monospace;
+	font-size: 0.9em;
+	min-height: 7em;
+	margin: 0.5em 0.2em;
+	padding: 0.6em;
+	text-align: left;
+	vertical-align: top;
+}
+.example .good {
+	border: thin dashed green;
+}
+.example .output {
+	width: 48%;
+}
+.example .spacer {
+	display: inline-block;
+	margin-top: 3em;
+	width: 2%;
+}
 
 #javascriptnotice {
   border: medium dashed red;
