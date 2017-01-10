@@ -29,7 +29,7 @@ function process() {
 $( document ).ready(function() {
   // Populate Presets dropdown
   var $rolePresets = $( '#role-presets' );
-  $.each( rolePresets, function(key, value) {
+  $.each( tswRollForRole.rolePresets, function(key, value) {
     var option = $( '<option />' ).val(key).text(key);
     $rolePresets.append(option);
   });
