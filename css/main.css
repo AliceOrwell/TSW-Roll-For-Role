@@ -62,6 +62,11 @@ form .output {
 	width: 70%;
 }
 
+.leftpanel ol {
+	text-align: justify;
+	padding-left: 1.3em;
+}
+
 .example {
 	text-align: left;
 }
