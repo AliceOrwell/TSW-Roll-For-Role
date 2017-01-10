@@ -58,7 +58,7 @@ var tswRollForRole = {
       }
 
       this.toString = function() {
-        var output = this.subject + " := " + this.object;
+        var output = this.subject + " = " + this.object;
         return output;
       };
 
@@ -108,9 +108,9 @@ var tswRollForRole = {
       return output;
     }
 
-    output += " -- " + assignments[0].toString();
+    output += ": " + assignments[0].toString();
     for(var i = 1; i < assignments.length; i++) {
-      output +=  " :: " + assignments[i].toString();
+      output +=  " -- " + assignments[i].toString();
     }
     return output;
   }
