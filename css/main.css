@@ -8,29 +8,29 @@ body {
 	text-align: center;
 }
 h2 {
-  text-align: left;
+	text-align: left;
 }
 p {
-  text-align: justify;
+	text-align: justify;
 }
 
 form label {
-  display: inline-block;
-  text-align: right;
-  vertical-align: top;
-  width: 7%;
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	width: 7%;
 }
 form label.for-select {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 form textarea, form .roll-results {
-  box-sizing: border-box;
-  font-family: monospace;
-  font-size: 90%;
-  width: 90%;
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: 90%;
+	width: 90%;
 }
 form textarea#rolls {
-  width: 44.5%;
+	width: 44.5%;
 	height: 13em;
 }
 form .roll-results {
@@ -43,23 +43,23 @@ form .roll-results {
 	color: #999;
 }
 form #submit {
-  font-size: 1em;
-  margin-top: 10px;
+	font-size: 1em;
+	margin-top: 10px;
 }
 form .output {
-  margin-top: 1em;
+	margin-top: 1em;
 }
 
 .leftpanel {
-  display: inline-block;
-  float: left;
-  padding-right: 1em;
-  text-align: left;
-  width: 25%;
+	display: inline-block;
+	float: left;
+	padding-right: 1em;
+	text-align: left;
+	width: 25%;
 }
 .rightpanel {
-  display: inline-block;
-  width: 70%;
+	display: inline-block;
+	width: 70%;
 }
 
 .example {
@@ -95,9 +95,9 @@ form .output {
 }
 
 #javascriptnotice {
-  border: medium dashed red;
-  color: red;
-  font-weight: bold;
-  padding: 1em;
-  margin: 1em;
+	border: medium dashed red;
+	color: red;
+	font-weight: bold;
+	padding: 1em;
+	margin: 1em;
 }
