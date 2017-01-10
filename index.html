@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>TSW Roll For Role</title>
+
+		<link rel="stylesheet" href="./css/main.css" type="text/css" />
 	</head>
 	<body>
     <a href="https://github.com/AliceOrwell/TSW-Roll-For-Role"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
@@ -35,7 +37,7 @@
       <a href="https://aliceorwell.github.io/TSW-Roll-Sorter/">TSW Roll Sorter</a>
 		</div>
 		<div class="rightpanel">
-			<form>
+			<form action="#">
 				<div>
 				  <label for="role-presets" class="for-select">Presets:</label>
 				  <select name="role-presets" id="role-presets"></select>
@@ -88,67 +90,9 @@
 			</div>
 		</div>
 
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
-
     <script language="javascript" type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
     <script language="javascript" type="text/javascript" src="./js/tswrollsorter.js"></script>
 		<script language="javascript" type="text/javascript" src="./src/tswrollforrole.js"></script>
-		<script>
-			window.onload = function(e) {
-				// Hide Javascript disabled notice
-				document.getElementById('javascriptnotice').style.display = 'none';
-			};
-
-      function process() {
-        var roles = $( '#roles' ).val();                // Get dirty role data
-        roles = tswRollForRole.roleExtracter( roles );  // Extract
-
-        var rolls = $( '#rolls' ).val();        // Get raw data
-        rolls = tswrollsorter.extract( rolls ); // Extract
-        rolls = tswrollsorter.filter( rolls );  // Filter
-        rolls = tswrollsorter.sort( rolls );    // Sort
-
-        var people = [];
-        for (var i = 0; i < rolls.length; i++) {
-          people.push( rolls[i].person );
-        }
-
-        var assignments = tswRollForRole.assigner( roles, people );
-        assignments = tswRollForRole.format( assignments );
-        $( '#output' ).val( assignments );
-      }
-
-      $( document ).ready(function() {
-        // Populate Presets dropdown
-        var $rolePresets = $( '#role-presets' );
-        $.each( rolePresets, function(key, value) {
-          var option = $( '<option />' ).val(key).text(key);
-          $rolePresets.append(option);
-        });
-
-        // Submit button clicked
-        $( 'form' ).on('submit', function( event ) {
-          event.preventDefault();
-          process();
-        });
-
-        // Something pasted to rolls
-        $( '#rolls' ).on('paste', function( event ) {
-          // Brief delay since paste event triggers before content is updated.
-          setTimeout(function(){
-  					process();
-  				}, 0);
-        });
-
-        // Populate Roles textarea on dropdown change
-        $( '#role-presets' ).on('change', function( event ) {
-          var value = $( this ).val();
-          var data = tswRollForRole.roleData( value );
-          $( '#roles' ).val( data );
-
-          process();
-        });
-      });
-		</script>
+		<script language="javascript" type="text/javascript" src="./src/main.js"></script>
 	</body>
 </html>
