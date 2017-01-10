@@ -40,7 +40,7 @@ var assignment = function( subject, object ) {
   this.toString = function() {
     var output = this.subject + " := " + this.object;
     return output;
-  }
+  };
 
   return this;
 };
@@ -77,7 +77,7 @@ var tswRollForRole = {
   roleData: function( preset ) {
     if ( rolePresets.hasOwnProperty(preset) ) {
       var p = rolePresets[preset];
-      p = p.toString()
+      p = p.toString();
       p = p.split(',').join('\n');  // Replace all commas for newlines
       return p;
     }
