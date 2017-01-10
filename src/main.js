@@ -12,6 +12,10 @@ function process() {
   rolls = tswrollsorter.filter( rolls );  // Filter
   rolls = tswrollsorter.sort( rolls );    // Sort
 
+  var rolls_con = tswrollsorter.condense( rolls );
+  var rolls_str = tswrollsorter.format( rolls_con );
+  $( 'form .roll-results' ).text( rolls_str );
+
   var people = [];
   for (var i = 0; i < rolls.length; i++) {
     people.push( rolls[i].person );
