@@ -75,16 +75,23 @@ form .output {
 	text-align: left;
 	vertical-align: top;
 }
+.example .input1 {
+	width: 8%;
+}
+.example .input2 {
+	width: 22%;
+}
 .example .good {
 	border: thin dashed green;
 }
 .example .output {
-	width: 48%;
+	width: 55%;
 }
 .example .spacer {
 	display: inline-block;
 	margin-top: 3em;
-	width: 2%;
+	text-align: center;
+	width: 3%;
 }
 
 #javascriptnotice {
