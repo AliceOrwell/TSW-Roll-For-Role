@@ -13,6 +13,14 @@ var tswRollForRole = {
       "Main Tank", "Off Tank", "Healer", "DABS", "DABS", "DPS", "DPS", "DPS",
       "DPS", "DPS"
     ],
+    "Eidolon NM": [
+      "Tank", "Healer", "DABS", "DABS", "Shield DPS", "DPS", "DPS", "DPS",
+      "DPS", "DPS"
+    ],
+    "Flappy Elite": [
+      "Main Tank", "Healtank", "DABS", "DABS", "Shadekiller", "DPS", "DPS",
+      "DPS", "DPS", "DPS"
+    ],
     "Flappy NM": [
       "Tank (Red)", "Tank (Purple)", "Healer", "DABS (Red)", "DABS (Purple)",
       "Shade 1", "Shade 2", "Shade 2", "Backup", "Backup"
@@ -20,6 +28,13 @@ var tswRollForRole = {
     "NYR Elite": [
       "DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS",
       "DPS", "DPS"
+    ],
+    "NYR NM": [
+      "Tank (Red)", "Tank (Purple)", "Healer", "Healtank", "Support", "DABS WW1",
+      "DABS WW2", "DPS WW1", "DPS WW2", "DPS"
+    ],
+    "Dungeon": [
+      "Tank", "Healer", "DPS", "DPS", "DPS"
     ]
   },
   models: {
