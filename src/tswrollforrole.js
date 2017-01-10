@@ -9,16 +9,16 @@
 var rolePresets = {
   "Custom": [],
   "Eidolon Elite": [
-    "Main Tank", "Off Tank", "Healer", "DABS", "DABS", "DPS", "DPS", "DPS", 
-	"DPS", "DPS"
+    "Main Tank", "Off Tank", "Healer", "DABS", "DABS", "DPS", "DPS", "DPS",
+    "DPS", "DPS"
   ],
   "Flappy NM": [
     "Tank (Red)", "Tank (Purple)", "Healer", "DABS (Red)", "DABS (Purple)",
     "Shade 1", "Shade 2", "Shade 2", "Backup", "Backup"
   ],
   "NYR Elite": [
-    "DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS", "DPS",
-	"DPS"
+    "DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS",
+    "DPS", "DPS"
   ]
 };
 
@@ -47,7 +47,7 @@ var assignment = function( subject, object ) {
 
 var tswRollForRole = {
   roleExtracter: function( roles ) {
-    if ( roles == "" ) {
+    if ( roles === "" ) {
       return [];
     }
     return roles.split( '\n' );
@@ -85,7 +85,7 @@ var tswRollForRole = {
   },
   format: function( assignments ) {
     var output = assignments.length + " Assignment(s)";
-    if ( assignments.length == 0 ) {
+    if ( assignments.length === 0 ) {
       return output;
     }
 
