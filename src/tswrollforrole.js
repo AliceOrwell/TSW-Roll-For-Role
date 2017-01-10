@@ -7,6 +7,10 @@
  **********************************************************/
 
 var tswRollForRole = {
+	settings: {
+		roleSeperator: ": ",
+		assignSeperator: " -- "
+	},
 	rolePresets: {
 		"Custom": [],
 		"Eidolon Elite": [
@@ -38,27 +42,67 @@ var tswRollForRole = {
 		]
 	},
 	models: {
-		assignments: {
-			numPeople: 0,
-			numRoles: 0,
-			list: []
-		},
-		assignment: function( subject, object ) {
-			this.subject = "UNASSIGNED";
-			this.object = "UNASSIGNED";
-			this.isAssigned = false;
+		assignments: function () {
+			this.numPeople = 0;
+			this.numRoles =  0;
+			this.list = [];
+			this.toString = function() {
+				var roles = this.numRoles;
+				var people = this.numPeople;
 
-			if ( object ) {
-				this.object = object;
-				this.isAssigned = true;
+				// Add Role count
+				var output = roles + " Role";
+				if ( roles != 1 ) {
+					output += "s";
+				}
+				output += ", ";
+
+				// Add People count
+				output += people + " ";
+				if ( people === 1 ) {
+					output += "Person";
+				}
+				else {
+					output += "People";
+				}
+
+				if ( roles === 0  || people === 0 ) {
+					return output;
+				}
+
+				output += " :: " + this.list[0].toString();
+				var sep = tswRollForRole.settings.assignSeperator;
+				for(var i = 1; i < this.list.length; i++) {
+					output +=  sep + this.list[i].toString();
+				}
+
+				return output;
+			};
+		},
+		assignment: function( role, person ) {
+			this.role = "UNASSIGNED";
+			this.person = "UNASSIGNED";
+			this.isRoleAssigned = false;
+			this.isPersonAssigned = false;
+			this.isAssigned = function() {
+				return ( this.isRoleAssigned || this.isPersonAssigned );
+			};
+
+			if ( role ) {
+				this.role = role;
+				this.isRoleAssigned = true;
 			}
-			if ( subject ) {
-				this.subject = subject;
-				this.isAssigned = true;
+			if ( person ) {
+				this.person = person;
+				this.isPersonAssigned = true;
 			}
 
 			this.toString = function() {
-				var output = this.subject + " = " + this.object;
+				var sep = tswRollForRole.settings.roleSeperator;
+				var output = this.role + sep + this.person;
+				if ( !this.isRoleAssigned ) {
+					output = this.person + sep + this.role;
+				}
 				return output;
 			};
 
@@ -81,37 +125,23 @@ var tswRollForRole = {
 		return roles.split( '\n' );
 	},
 	assigner: function ( roles, people ) {
-		var assignments = [];
+		var assignments = new this.models.assignments();
+		assignments.numRoles = roles.length;
+		assignments.numPeople = people.length;
 
-		var subjects = roles;
-		var objects = people;
-		if ( roles.length < people.length ) {
-			subjects = people;
-			objects = roles;
-		}
-
-		for( var i = 0; i < subjects.length; i++ ) {
-			var subject = subjects[i];
-			var object = false;
-			if ( i < objects.length ) {  // If there are objects left to assign
-				object = objects[i];
+		for( var i = 0; i < roles.length; i++ ) {
+			var role = roles[i];
+			var person = false;
+			if ( i < people.length ) {  // If there are objects left to assign
+				person = people[i];
 			}
 
-			var ass = new this.models.assignment( subject, object );
-			assignments.push( ass );
+			var a = new this.models.assignment( role, person );
+			assignments.list.push( a );
 		}
 		return assignments;
 	},
 	format: function( assignments ) {
-		var output = assignments.length + " Assignment(s)";
-		if ( assignments.length === 0 ) {
-			return output;
-		}
-
-		output += ": " + assignments[0].toString();
-		for(var i = 1; i < assignments.length; i++) {
-			output +=  " -- " + assignments[i].toString();
-		}
-		return output;
+		return assignments.toString();
 	}
 };
