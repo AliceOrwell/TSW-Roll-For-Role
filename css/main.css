@@ -81,16 +81,16 @@ form .output {
 	vertical-align: top;
 }
 .example .input1 {
-	width: 8%;
+	width: 10%;
 }
 .example .input2 {
-	width: 22%;
+	width: 32%;
 }
 .example .good {
 	border: thin dashed green;
 }
 .example .output {
-	width: 53%;
+	width: 42%;
 }
 .example .spacer {
 	display: inline-block;
