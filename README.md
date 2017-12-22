@@ -1,7 +1,7 @@
-# TSW-Roll-For-Role
-Webtool to randomly assign roles for The Secret World
+# SWL-Roll-For-Role
+Webtool to randomly assign roles for Secret World Legends
 
-A live version of the project can be found at: https://aliceorwell.github.io/TSW-Roll-For-Role/
+A live version of the project can be found at: https://MerlinAesalon.github.io/SWL-Roll-For-Role/
 
 Structure
 ------------
@@ -19,6 +19,8 @@ Pull requests are welcome!
 
 Attribution
 -------
+Based on [TSW-Roll-For-Role by AliceOrwell](https://github.com/AliceOrwell/TSW-Roll-For-Role)
+
 DOM manipulation is done using [jQuery](https://jquery.com/).
 
 License
