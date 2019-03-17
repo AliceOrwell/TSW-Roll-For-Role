@@ -33,9 +33,14 @@ var tswRollForRole = {
 			"DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS",
 			"DPS", "DPS"
 		],
-		"NYR NM": [
+		"NYR NM (old)": [
 			"Tank (Red)", "Tank (Purple)", "Healer", "Healtank", "Support", "DABS WW1",
 			"DABS WW2", "DPS WW1", "DPS WW2", "DPS"
+		],
+		"NYR NM": [
+			"Tank (Red)", "Tank (Purple)", "Healer", "Placeholder", "DPS (Mid range) - DABS",
+			"DPS (Mid range) - DABS", "DPS (Mid range)", "DPS (Mid range)", "DPS (Close range)", 
+			"DPS (Close range)"
 		],
 		"Dungeon": [
 			"Tank", "Healer", "DPS", "DPS", "DPS"
