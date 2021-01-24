@@ -21,6 +21,10 @@ var tswRollForRole = {
 			"Tank", "Healer", "DABS", "DABS", "Shield DPS", "DPS", "DPS", "DPS",
 			"DPS", "DPS"
 		],
+		"Eidolon NM Alt": [
+			"Tank & Shot Caller", "Healer", "DABS", "DABS", "DPS/Off Tank", "Blue DPS SF",
+			"Blue DPS", "Red DPS", "Red DPS", "DPS/Backup Leech"
+		],
 		"Flappy Elite": [
 			"Main Tank", "Healtank", "DABS", "DABS", "Shadekiller", "DPS", "DPS",
 			"DPS", "DPS", "DPS"
@@ -28,6 +32,11 @@ var tswRollForRole = {
 		"Flappy NM": [
 			"Tank (Red)", "Tank (Purple)", "Healer", "DABS (Red)", "DABS (Purple)",
 			"Shade 1", "Shade 2", "Shade 2", "Backup", "Backup"
+		],
+		"Flappy NM Alt": [
+			"Tank (Purple) & Shot Caller", "DPS w SF/Off Tank (Red)", "Healer w SF/Healer",
+			"DABS (Red)", "DABS (Purple)", "Shade 1", "Shade 2", "DPS w Ice Mani+OV", "DPS w Ice Mani+OV",
+			"DPS w SF/DPS"
 		],
 		"NYR Elite": [
 			"DPS Tank", "Healtank", "DABS", "DABS", "SF", "SF", "DPS", "DPS",
